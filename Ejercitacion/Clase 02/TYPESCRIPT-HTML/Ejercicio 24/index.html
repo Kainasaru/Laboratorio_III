@@ -1,0 +1,76 @@
+<!--24- Realizar una página que permita el ingreso de: Apellido, Nombre, Dni y sexo de una persona. Si el usuario
+     pulsa el botón de confirmación se invocará a una función encargada de validar cada uno de los datos ingresados
+      (que tanto el nombre y apellido no estén vacíos, que el documento sea numérico y que el sexo sea o ‘m’ o ‘f’).-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/empleado.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personas</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Carga de datos:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="name" placeholder="Ingresar nombre..."></td>
+                </tr>
+                <tr>
+                    <td>apellido:</td>
+                    <td><input type="text" id="surname" placeholder="Ingresar apellido..."></td>
+                </tr>
+                <tr>
+                    <td>DNI:</td>
+                    <td><input type="text" id="dni" placeholder="Ingresar dni..."></td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td><input type="text" id="gender" placeholder="Ingresar sexo..."></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="validarDatos()" value="Enviar" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h3>Validación</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Nombre:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="result" style="width: 100%;" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Apellido:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="result" style="width: 100%;" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2">DNI:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="result" style="width: 100%;" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Apellido:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="result" style="width: 100%;" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

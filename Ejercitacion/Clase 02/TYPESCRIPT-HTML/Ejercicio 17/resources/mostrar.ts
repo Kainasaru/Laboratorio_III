@@ -1,4 +1,4 @@
-function mostrar() {
+function mostrar() : void{
     var chBox : NodeListOf<HTMLElement> = document.getElementsByName("langCbx");
     console.log("Películas seleccionadas:\n");
     for( let i = 0 ; i < chBox.length ; i++) {

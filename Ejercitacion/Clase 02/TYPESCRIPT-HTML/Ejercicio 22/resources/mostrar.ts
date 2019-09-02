@@ -1,8 +1,8 @@
-function mostrar() {
+function mostrar() : void {
     let checkbox: NodeListOf<HTMLElement> = document.getElementsByName("mChbox");
     let meses: string[] = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
         "Diciembre"];
-    let tabla = document.createElement("table");
+    let tabla : HTMLTableElement = document.createElement("table");
     tabla.setAttribute("border", "1");
     tabla.setAttribute("id", "tab1");
     tabla.createTHead();

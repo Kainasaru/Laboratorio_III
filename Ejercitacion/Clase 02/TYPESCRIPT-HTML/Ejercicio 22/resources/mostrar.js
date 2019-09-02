@@ -36,3 +36,4 @@ function mostrar() {
         document.body.appendChild(tabla);
     }
 }
+//# sourceMappingURL=mostrar.js.map

@@ -27,3 +27,4 @@ function mostrar() {
     console.log("El resultado de la operaci\u00F3n es " + result + ".\n");
     document.getElementById("result").value = result.toString();
 }
+//# sourceMappingURL=mostrar.js.map

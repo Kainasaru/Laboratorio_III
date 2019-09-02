@@ -1,0 +1,57 @@
+<!--23-Crear una página que posea un formulario que permita el ingreso del nombre, apellido, email y cantidad de horas
+trabajadas a la semana de un operario. Al pulsar el botón btnCalcular, se invocará a una función que calcule y 
+muestre en un cuadro de texto (INPUT type=text) el salario mensual del operario. El salario se calculará por medio
+de la cantidad de horas trabajadas al mes por un coeficiente. Dicho coeficiente lo retornará la función 
+ObtenerCoeficiente (por el momento será siempre 6.88).-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/empleado.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empleados</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Carga de salario:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="name" placeholder="Ingresar nombre..."></td>
+                </tr>
+                <tr>
+                    <td>apellido:</td>
+                    <td><input type="text" id="surname" placeholder="Ingresar apellido..."></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" placeholder="Ingresar email..."></td>
+                </tr>
+                <tr>
+                    <td>Horas trabajadas en la semana:</td>
+                    <td><input type="number" id="hours" placeholder="Ingresar horas trabajadas..."></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="calcularSalario()" value="Seleccionar" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Resultado:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="result" style="width: 100%;" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

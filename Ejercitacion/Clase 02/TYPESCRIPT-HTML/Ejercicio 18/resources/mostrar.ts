@@ -1,4 +1,4 @@
-function mostrar() {
+function mostrar() : void {
     var radio : NodeListOf<HTMLElement> = document.getElementsByName("rateRadio");
     var userName : string = (<HTMLInputElement>document.getElementById("name")).value;
     console.log(`Usuario: ${userName}\nCalificación al sitio: `);

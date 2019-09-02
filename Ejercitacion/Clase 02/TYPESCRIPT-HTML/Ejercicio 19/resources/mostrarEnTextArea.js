@@ -5,3 +5,4 @@ function mostrarEnTextArea() {
         document.getElementById("txtArea").value += select[i].value + "\n";
     }
 }
+//# sourceMappingURL=mostrarEnTextArea.js.map

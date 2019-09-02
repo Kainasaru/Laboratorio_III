@@ -1,4 +1,4 @@
-function mostrar() {
+function mostrar() : void{
     let radioInput : NodeListOf<HTMLElement> = document.getElementsByName("opRdo");
     let operador : string = "";
     let op1 : number = parseInt((<HTMLInputElement>document.getElementById("op1")).value);

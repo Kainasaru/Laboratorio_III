@@ -5,3 +5,4 @@ function mostrar() {
     var cv = document.getElementById("cv").value;
     console.log("Nombre " + nombre + "\nEmail: " + email + "\nDNI: " + dni + "\nCurriculum Vitae: " + cv);
 }
+//# sourceMappingURL=mostrar.js.map
