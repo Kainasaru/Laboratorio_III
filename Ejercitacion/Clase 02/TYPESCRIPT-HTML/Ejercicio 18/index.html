@@ -1,0 +1,56 @@
+<!--18- Confeccionar un formulario que solicite el ingreso del nombre de una persona y permita votar el sitio. 
+Mediante un control de tipo radio, el visitante puede elegir entre las siguientes opciones: Excelente, Muy Bueno,
+Bueno, Regular y Malo. Al pulsar el botón, mostrar la opción elegida por consola.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calificar</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Calificar sitio web:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="name" placeholder="Ingresar nombre..."></td>
+                </tr>
+                <tr>
+                    <td>Excelente</td>
+                    <td><input type="radio" name="rateRadio" value="Excelente"><br /></td>
+                </tr>
+                <tr>
+                    <td>Muy bueno</td>
+                    <td><input type="radio" name="rateRadio" value="Muy bueno"></td>
+                </tr>
+                <tr>
+                    <td>Bueno</td>
+                    <td><input type="radio" name="rateRadio" value="Bueno"></td>
+                </tr>
+                <tr>
+                    <td>Regular</td>
+                    <td><input type="radio" name="rateRadio" value="Regular"></td>
+                </tr>
+                <tr>
+                    <td>Malo</td>
+                    <td><input type="radio" name="rateRadio" value="Malo"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="mostrar()" value="Enviar" style="width: 100%;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

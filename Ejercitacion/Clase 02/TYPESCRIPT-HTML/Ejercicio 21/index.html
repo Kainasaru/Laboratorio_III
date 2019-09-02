@@ -1,0 +1,68 @@
+<!--21- Se necesita hacer una página que contenga dos cuadros de texto (dónde se ingresarán números), 
+un botón (con la leyenda ‘Calcular’) y cuatro controles de tipo ‘radioButton’ 
+(suma, resta, multiplicación y división). Cuando se pulsa el botón una función deberá mostrar el resultado 
+(en la consola y en otro cuadro de texto), de acuerdo al tipo de operación que el usuario eligió. 
+Utilizar la estructura ‘switch’.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <form style="border: solid;width: 19%;margin: 1%">
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3 align="left">Calculadora</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Ingresar operandos:</td>
+                </tr>
+                <tr>
+                    <td>Operando 1:</td>
+                    <td><input type="number" id="op1"></td>
+                </tr>
+                <tr>
+                    <td>Operando 2:</td>
+                    <td><input type="number" id="op2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Seleccionar operación:</td>
+                </tr>
+                <tr>
+                    <td>Suma:</td>
+                    <td><input type="radio" name="opRdo" value="+"></td>
+                </tr>
+                <tr>
+                    <td>Resta:</td>
+                    <td><input type="radio" name="opRdo" value="-"></td>
+                </tr>
+                <tr>
+                    <td>Multiplicación:</td>
+                    <td><input type="radio" name="opRdo" value="*"></td>
+                </tr>
+                <tr>
+                    <td>División:</td>
+                    <td><input type="radio" name="opRdo" value="/"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Calcular" style="width: 100%" onclick="mostrar()"></td>
+                </tr>
+                <tr>
+                    <td>Resultado:</td>
+                    <td><input type="text" id="result" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!--20- Confeccionar un formulario que muestre un control de cada tipo y los muestre todos deshabilitados. 
+(Cuando conozca JavaScript podemos habilitarlos por ejemplo si el visitante ingresa una clave correcta, 
+por ahora vea como queda visualmente el formulario con los controles deshabilitados)-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos los controles</title>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <caption>Controles de html:</caption>
+            <thead>
+                <th>Nombre</th>
+                <th>Control</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Input(Texto)</td>
+                    <td><input type="text" id="txt" placeholder="Un texto..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Números)</td>
+                    <td><input type="number" id="nmb" placeholder="un numero..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Rango)</td>
+                    <td><input type="range" id="rng"></td>
+                </tr>
+                <tr>
+                    <td>Input(Constraseñas)</td>
+                    <td><input type="password" id="pass" placeholder="una contraseña..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Radio)</td>
+                    <td><input type="radio" id="rdo"></td>
+                </tr>
+                <tr>
+                    <td>Input(Botón)</td>
+                    <td><input type="button" id="btn" value="Un botón"></td>
+                </tr>
+                <tr>
+                    <td>Input(Reseteador)</td>
+                    <td><input type="reset" id="rst" value="Botón de reseteo"></td>
+                </tr>
+                <tr>
+                    <td>Input(Buscador)</td>
+                    <td><input type="search" id="srch" placeholder="buscar..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Enviar al servidor)</td>
+                    <td><input type="submit" id="submit" value="Botón de envío al servidor"></td>
+                </tr>
+                <tr>
+                    <td>Input(Teléfono)</td>
+                    <td><input type="tel" id="tel" placeholder="un teléfono..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Casilla check)</td>
+                    <td><input type="checkbox" id="chBox"></td>
+                </tr>
+                <tr>
+                    <td>Input(URL)</td>
+                    <td><input type="url" id="url" placeholder="una url..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Semana)</td>
+                    <td> <input type="week" id="week" ></td>
+                </tr>
+                <tr>
+                    <td>Input(Hora)</td>
+                    <td><input type="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td>Input(Meses)</td>
+                    <td><input type="month" id="month"></td>
+                </tr>
+                <tr>
+                    <td>Input(Imagen)</td>
+                    <td><input type="image" id="img"></td>
+                </tr>
+                <tr>
+                    <td>Input(Oculto)</td>
+                    <td><input type="hidden" id="hidden"></td>
+                </tr>
+                <tr>
+                    <td>Input(Archivos)</td>
+                    <td><input type="file" id="file" ></td>
+                </tr>
+                <tr>
+                    <td>Input(Email)</td>
+                    <td><input type="email" id="email" placeholder="ingrese email..."></td>
+                </tr>
+                <tr>
+                    <td>Input(Fecha y hora local)</td>
+                    <td><input type="datetime-local" id="dt"></td>
+                </tr>
+                <tr>
+                    <td>Input(Fecha y hora)</td>
+                    <td><input type="datetime" id="dt2"> </td>
+                </tr>
+                <tr>
+                    <td>Input(Fecha)</td>
+                    <td><input type="date" id="dt3"></td>
+                </tr>
+                <tr>
+                    <td>Input(Color)</td>
+                    <td><input type="color" id="color"></td>
+                </tr>
+                <tr>
+                    <td>Select (Seleccionador o combo box)</td>
+                    <td>
+                        <select id="select">
+                            <optgroup label="Hotel">
+                                <option>Hotel</option>
+                                <option>Hotel</option>
+                                <option>Hotel</option>
+                            </optgroup>
+                            <optgroup label="Trivago">
+                                <option>Trivago</option>
+                                <option>Trivago</option>
+                                <option>Trivago</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TextArea (Cuadro de texto multilínea)</td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

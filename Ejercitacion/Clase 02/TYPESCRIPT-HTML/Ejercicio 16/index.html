@@ -1,0 +1,26 @@
+<!--16- Confeccionar un formulario que permita ingresar el nombre de una persona, su mail, su DNI
+     (documento nacional de identidad) y finalmente su currículum vitae 
+     (este último dato hacerlo utilizando un <TEXTAREA>). Al pulsar el botón btnAceptar, por medio de una función 
+         en TypeScript, mostrar todos sus datos por consola.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="./resources/mostrar.js"></script>
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <hr/><h1>Formulario</h1><hr/>
+    <form>
+        <input type="text" id="name" placeholder="Ingrese nombre..." ><br/>
+        <input type="email" id="email" placeholder="Ingrese email..."><br/>
+        <input type="number" min="1000000" max="99999999" id="dni" placeholder="Ingrese DNI..."><br/>
+        <h4>Curriculum Vitae:</h4>
+        <textarea id="cv" name="Curriculum Vitae" cols="15" rows="10"></textarea><br/>
+        <input type="button" id="btnAceptar" onclick="mostrar()" value="Enviar">
+    </form>
+    <hr/>
+</body>
+</html>

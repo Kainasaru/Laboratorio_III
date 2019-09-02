@@ -1,0 +1,49 @@
+<!--17- Confeccione un formulario que muestre una serie de títulos de películas con su respectivo checkbox.
+     Al pulsar el botón, mostrar las películas seleccionadas por consola.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movies</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2"><h3>Seleccionar películas</h3></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Buscando a Nemo</td>
+                    <td><input type="checkbox" name="langCbx" value="Buscando a Nemo"><br /></td>
+                </tr>
+                <tr>
+                    <td>Harry Potter</td>
+                    <td><input type="checkbox" name="langCbx" value="Harry Potter"></td>
+                </tr>
+                <tr>
+                    <td>El Señor de los Anillos</td>
+                    <td><input type="checkbox" name="langCbx" value="El Señor de los Anillos"></td>
+                </tr>
+                <tr>
+                    <td>Buscando a Dory</td>
+                    <td><input type="checkbox" name="langCbx" value="Buscando a Dory"></td>
+                </tr>
+                <tr>
+                    <td>Elysium</td>
+                    <td><input type="checkbox" name="langCbx" value="Elysium"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="mostrar()" value="Elegir" style="width: 100%;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!--19- Confeccionar un formulario que muestre en un comboBox (SELECT) una serie de mails. Luego permitir que el 
+visitante seleccione uno o varios mails del cuadro de selección.-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrarEnTextArea.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Correín</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3 align="left">Seleccione el email que desee:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <select id="cboMail" multiple>
+                            <option>kainasaru@gmail.com</option>
+                            <option>manassali_leo@hotmail.com</option>
+                            <option>king_grox@hotmail.com</option>
+                            <option>leokinggrox@gmail.com</option>
+                            <option>leo_kinggrox@hotmail.com</option>
+                            <option>leoxargam@gmail.com</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Enviar" onclick="mostrarEnTextArea()" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td>Seleccionados:</td>
+                    <td><textarea readonly id="txtArea"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

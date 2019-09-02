@@ -1,0 +1,40 @@
+<!--22- Cree una página que muestre, a través de un Array, los nombres de los meses de un año, el número al que ese
+corresponde o ambos. Utilizar controles de tipo ’checkBox’.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meses</title>
+</head>
+
+<body>
+    <form style="border: solid;width: 7%;margin: 1%">
+        <table>
+            <caption>Meses del año:</caption>
+            <thead>
+                <th colspan="2">
+                    <h3 align="left">Mostrar:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Números:</td>
+                    <td><input type="checkbox" name="mChbox" value="num"></td>
+                </tr>
+                <tr>
+                    <td>Nombres:</td>
+                    <td><input type="checkbox" name="mChbox" value="name"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Seleccionar" style="width: 100%;" onclick="mostrar()"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
