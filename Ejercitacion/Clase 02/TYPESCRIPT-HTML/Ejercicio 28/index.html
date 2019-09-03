@@ -1,0 +1,49 @@
+<!--28- Realizar una página parecida a la del ejercicio anterior que permita crear una tabla. Para ello se 
+    ingresarán la cantidad de filas y de columnas y al pulsar el botón se creará la tabla en el elemento div.
+     Ayuda: se deben agregar las filas al elemento tbody y este último al elemento table.-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/generarTabla.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Creador de tabla:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cantidad de filas:</td>
+                    <td><input type="number" id="rows"></td>
+                </tr>
+                <tr>
+                    <td>Cantidad de columnas:</td>
+                    <td><input type="number" id="cols"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="generarTabla( Number(document.getElementById('rows').value) , Number(document.getElementById('cols').value) )" value="Enviar" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resultado:</td>
+                    <td>
+                        <div id="div">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

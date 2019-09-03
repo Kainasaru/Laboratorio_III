@@ -1,0 +1,38 @@
+<!--29- Diseñar una función que permita agregar un ToolTipText cuando se pasa el mouse por sobre un cuadro de texto.
+La función debe recibir el mensaje a mostrar y el id del cuadro de texto. Utilizar el evento event para obtener
+las coordenadas del mouse.-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/mostrarTooltip.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tooltip</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Generados de tooltip:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pasar el mouse por el textbox:</td>
+                    <td><input type="text" id="input"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onmouseover="mostrarTooltip('input', document.getElementById('input').value )" value="Enviar" style="width: 100%;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
