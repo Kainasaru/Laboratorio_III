@@ -1,0 +1,116 @@
+<!--34- Agregarle al ejercicio del ingreso de datos la siguiente funcionalidad:
+a. Colocar todos los controles deshabilitados (disabled) menos el del número de trámite, que además deberá tener foco.
+b. Al ingresar un valor y pulsar ‘enter’ se invocará a una función que se encargue de validar dicho control y 
+de habilitar y pasarle el foco al control siguiente, únicamente si el valor del control es válido.
+c. Si el usuario pulsa la tecla ‘esc’ el control deberá deshabilitarse y el foco será pasado al control anterior.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="./resources/function.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos los controles</title>
+</head>
+<body>
+    <form>
+        <h1>Los valores válidos para los controles son los números</h1>
+        <table border="1">
+            <caption>Controles de html:</caption>
+            <thead>
+                <th colspan="2">Controles</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingrese número de trámite:</td>
+                    <td><input type="text" name="inputs" id="1" placeholder="Número de trámite..." onkeypress="focusAndEnable(this)" onload="setFocus('1')"></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="2" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="3" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="4" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="5" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="6" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="7" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="text" name="inputs" id="8" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="9" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="10" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="11" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td> <input type="text" name="inputs" id="12" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="13" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="14" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="15" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="16" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="17" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="18" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="19" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="20" onkeypress="focusAndEnable(this)" disabled> </td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="21" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="inputs" id="22" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

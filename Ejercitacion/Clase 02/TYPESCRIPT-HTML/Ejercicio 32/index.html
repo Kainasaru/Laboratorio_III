@@ -1,0 +1,28 @@
+<!--32- Añadir la siguiente característica a los ejercicios anteriores: cuando se pulsa un botón del mouse,
+el color de fondo del cuadro de mensaje debe ser amarillo (#FFFFCC) y cuando se pulsa una tecla,
+el color de fondo debe ser azul (#CCE6FF). Al volver a mover el mouse, el color de fondo vuelve a ser blanco.-->
+
+<!DOCTYPE html>
+<html lang="es" oncontextmenu="backgroundColorChanger('div1','yellow')" onclick="backgroundColorChanger('div1','yellow')"
+onkeydown="backgroundColorChanger('div1','blue')" onmousemove="backgroundColorChanger('div1','white')">
+
+<head>
+    <script src="./resources/backgroundChanger.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colores</title>
+</head>
+
+<body>
+    <div id="div1" border="1"> 
+        <h2>Este es un div que puede cambiar de color:</h2>
+        <ul>
+            <li>Pulsa un botón del mouse para cambiar el fondo a amarillo.</li>
+            <li>Pulsa una tecla para cambiar el fondo a azul.</li>
+            <li>Mueve el mouse para reestablecer el fondo a blanco.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,3 @@
 function mostrarTooltip(inputId : string , message : string) : void {
-    (<HTMLInputElement>document.getElementById(inputId)).eve
-    
-    
+    (<HTMLInputElement>document.getElementById(inputId)).title = message;
 }

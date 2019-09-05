@@ -1,39 +1,47 @@
-function mostrar() : void {
+function mostrar(): void {
     let checkbox: NodeListOf<HTMLElement> = document.getElementsByName("mChbox");
     let meses: string[] = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
         "Diciembre"];
-    let tabla : HTMLTableElement = document.createElement("table");
+    let oldTabla: HTMLTableElement = <HTMLTableElement>document.getElementById("tab1"); 
+    let tabla: HTMLTableElement = document.createElement("table");
+    let tableHead: HTMLTableSectionElement = tabla.createTHead();
+    let tableBody: HTMLTableSectionElement = tabla.createTBody();
+    let isName = false;
+    let isNum = false;
     tabla.setAttribute("border", "1");
     tabla.setAttribute("id", "tab1");
-    tabla.createTHead();
-    tabla.createTBody();
-    for (let i = 0; i < 12; i++) {
-        tabla.tBodies.item(0).insertRow();
-    }
+
     for (let i = 0; i < checkbox.length; i++) {
         if ((<HTMLInputElement>checkbox[i]).checked == true && (<HTMLInputElement>checkbox[i]).value == "name") {
-            tabla.tHead.insertBefore(document.createElement("th"), tabla.tHead[1]).textContent = "Mes: ";
-            for (let i = 0; i < 12; i++) {
-                tabla.tBodies.item(0).rows.item(i).insertCell().textContent = meses[i];
-            }
+            isName = true;
         }
         else if ((<HTMLInputElement>checkbox[i]).checked == true && (<HTMLInputElement>checkbox[i]).value == "num") {
-            tabla.tHead.appendChild(document.createElement("th")).textContent = "Número: ";
-            for (let i = 0; i < 12; i++) {
-                tabla.tBodies.item(0).rows.item(i).insertCell().textContent = (i + 1).toString();
+            isNum = true;
+        }
+    }
+    if (oldTabla != null) {
+        oldTabla.remove(); //Elimino la tabla anterior para insertar la nueva
+    }
+    for (let i = 0; i < 12 && (isNum || isName); i++) {
+        tableBody.insertRow();
+        if (isNum) {
+            if (i == 0) {
+                tableHead.appendChild(document.createElement("th")).textContent = "Número:";
             }
+            tableBody.rows.item(i).insertCell().textContent = (i + 1).toString();
+        }
+        if (isName) {
+            if (i == 0) {
+                tableHead.appendChild(document.createElement("th")).textContent = "Mes:";
+            }
+            tableBody.rows.item(i).insertCell().textContent = meses[i];
         }
     }
-    if (tabla.tHead.children.length == 0) {
-        if (document.getElementById("tab1")) {
-            document.body.removeChild(document.getElementById("tab1"));
-        }
-    }
-    else if (document.getElementById("tab1")) {
-        document.body.replaceChild(tabla, document.getElementById("tab1"));
-    }
-    else {
+    if (isNum || isName) {
+        tabla.appendChild(tableHead);
+        tabla.appendChild(tableBody);
         document.body.appendChild(tabla);
     }
 }
+
 

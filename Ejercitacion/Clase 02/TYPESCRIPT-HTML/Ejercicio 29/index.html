@@ -24,11 +24,7 @@ las coordenadas del mouse.-->
             <tbody>
                 <tr>
                     <td>Pasar el mouse por el textbox:</td>
-                    <td><input type="text" id="input"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="button" onmouseover="mostrarTooltip('input', document.getElementById('input').value )" value="Enviar" style="width: 100%;">
-                    </td>
+                    <td><input type="text" id="input" onmouseover="mostrarTooltip('input',document.getElementById('input').value)"></td>
                 </tr>
             </tbody>
         </table>

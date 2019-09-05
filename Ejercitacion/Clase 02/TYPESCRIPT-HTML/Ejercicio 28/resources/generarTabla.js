@@ -1,6 +1,6 @@
 function generarTabla(rows, cols) {
-    document.getElementById("div").innerHTML = "";
     var tabla = document.createElement("table");
+    document.getElementById("div").innerHTML = "";
     tabla.createTBody();
     tabla.createCaption();
     tabla.caption.textContent = "Su tabla";

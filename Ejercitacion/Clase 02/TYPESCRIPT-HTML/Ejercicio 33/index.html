@@ -1,0 +1,33 @@
+<!--33- 33- Realizar una función que solo permita ingresar números en un cuadro de texto. 
+Utilizar el evento onKeyDown.-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./resources/onlyNumbers.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Textbox solo-números</title>
+</head>
+<body>
+    <form>
+        <table>
+            <thead>
+                <th colspan="2">
+                    <h3>Textbox restringido:</h3>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingrese solo números:</td>
+                    <!--Se ejecuta la función y luego se carga la letra en el input. Por ello on keyup(Tecla levantada)-->
+                    <td><input type="text" id="input" onkeydown="onlyNumbers(this)" onkeyup="onlyNumbers(this)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
