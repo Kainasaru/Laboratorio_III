@@ -1,0 +1,2 @@
+Crear formulario de alta que pida todos los datos del empleado.
+Solo guarda legajo y nombre.
