@@ -40,12 +40,18 @@ namespace Geometria {
         }
         //Metodos
         public ToString() {
+            if(this._perimetro === null || this._area === null) {
+                this._ladoUno = Math.abs(this._vertice1.GetX() - this._vertice2.GetX()); 
+                this._ladoDos = Math.abs(this._vertice4.GetY() - this._vertice1.GetY()); 
+                this._area = this._ladoDos * this._ladoUno;
+                this._perimetro = 2 * (this._ladoUno + this._ladoDos);
+            }
             return `Rect&aacute;ngulo:<br/>Lado uno: ${this._ladoUno}. Lado dos: ${this._ladoDos}.<br/>` +
             `Per&iacute;metro: ${this._perimetro}.<br/>Area: ${this._area}<br/>` +
             `V&eacute;rtice 1: (${this._vertice1.GetX()};${this._vertice1.GetY()})<br/>` +
             `V&eacute;rtice 2: (${this._vertice2.GetX()};${this._vertice2.GetY()})<br/>` +
-            `V&eacute;rtice 2: (${this._vertice3.GetX()};${this._vertice3.GetY()})<br/>` +
-            `V&eacute;rtice 2: (${this._vertice4.GetX()};${this._vertice4.GetY()})<br/>`;
+            `V&eacute;rtice 3: (${this._vertice3.GetX()};${this._vertice3.GetY()})<br/>` +
+            `V&eacute;rtice 4: (${this._vertice4.GetX()};${this._vertice4.GetY()})<br/>`;
         }
     }
 

@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script type="text/javascript" src="./app.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rectangulo</title>
 </head>
+
 <body>
     <h1>Rectángulo:</h1>
-    <tbal
+    <table id="table">
+        <tbody>
+            <tr>
+                <td>Vértice 1:</td>
+                <td>
+                    <img src="./images/vertice1.png" style="width: 57%;height:57%;"><br/>
+                    (<input type="number" id="v1x" placeholder="x">;<input type="number" id="v1y" placeholder="y">)
+                </td>
+            </tr>
+            <tr>
+                <td>Vértice 3:</td>
+                <td>
+                    <img src="./images/vertice3.png" style="width: 57%;height:57%;"><br/>
+                    (<input type="number" id="v3x" placeholder="x">;<input type="number" id="v3y" placeholder="y">)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Generar Rect&aacute;ngulo" id="btnEnv" onclick="mostrar()"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Su rectángulo:</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
