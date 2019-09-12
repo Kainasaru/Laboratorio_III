@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript" src="./resources/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figuras Geometricas</title>
+</head>
+
+<body id="bdy">
+    <table id="table">
+        <tbody>
+            <tr>
+                <td colspan="2">Seleccionar figura:</td>
+            </tr>
+            <tr>
+                <td>Triángulo:</td>
+                <td><input type="radio" name="rdo" value="1" checked></td>
+            </tr>
+            <tr>
+                <td>Rectángulo:</td>
+                <td><input type="radio" name="rdo" value="2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="sendBtn" value="mostrar form" onclick="mostrarForm()"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="border: solid;width:15em;" id="tri" hidden>
+        <table>
+            <tr>
+                <td colspan="2">Información de su triángulo:</td>
+            </tr>
+            <tr>
+                <td>Color:</td>
+                <td><input type="color" id="triColor"></td>
+            </tr>
+            <tr>
+                <td>Base:</td>
+                <td><input type="number" id="triBase" value="1" min="1"></td>
+            </tr>
+            <tr>
+                <td>Altura:</td>
+                <td>
+                    <input type="number" id="triAltura" value="1" min="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="envBtn" onclick="mostrarTriangulo()" value="Generar"></td>
+            </tr>
+        </table>
+    </div>
+    <div style="border: solid;width:15em;" id="rec" hidden>
+        <table>
+            <tr>
+                <td colspan="2">Información de su rectángulo:</td>
+            </tr>
+            <tr>
+                <td>Color:</td>
+                <td><input type="color" id="recColor"></td>
+            </tr>
+            <tr>
+                <td>Lado 1:</td>
+                <td><input type="number" id="recL1" value="1" min="1"></td>
+            </tr>
+            <tr>
+                <td>Lado 2:</td>
+                <td>
+                    <input type="number" id="recL2" value="1" min="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="envBtn" onclick="mostrarRectangulo()" value="Generar"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
