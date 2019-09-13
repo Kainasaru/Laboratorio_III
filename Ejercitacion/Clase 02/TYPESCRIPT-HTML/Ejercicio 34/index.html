@@ -1,12 +1,15 @@
 <!--34- Agregarle al ejercicio del ingreso de datos la siguiente funcionalidad:
-a. Colocar todos los controles deshabilitados (disabled) menos el del número de trámite, que además deberá tener foco.
-b. Al ingresar un valor y pulsar ‘enter’ se invocará a una función que se encargue de validar dicho control y
-de habilitar y pasarle el foco al control siguiente, únicamente si el valor del control es válido.
-c. Si el usuario pulsa la tecla ‘esc’ el control deberá deshabilitarse y el foco será pasado al control anterior.-->
+a. Colocar todos los controles deshabilitados ( disabled ) menos el del número de
+trámite , que además deberá tener foco.
+b. Al ingresar un valor y pulsar ‘enter’ se invocará a una función que se encargue
+de validar dicho control y de habilitar y pasarle el foco al control siguiente,
+únicamente si el valor del control es válido.
+c. Si el usuario pulsa la tecla ‘esc’ el control deberá deshabilitarse y el foco será
+pasado al control anterior.-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script src="./resources/function.js"></script>
+    <script type="text/javascript" src="./resources/function.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,100 +17,125 @@ c. Si el usuario pulsa la tecla ‘esc’ el control deberá deshabilitarse y el
 </head>
 <body>
     <form>
-        <h1>Los valores válidos para los controles son los números</h1>
         <table border="1">
             <caption>Controles de html:</caption>
             <thead>
-                <th colspan="2">Controles</th>
+                <th>Nombre</th>
+                <th>Control</th>
             </thead>
             <tbody>
+              <tr>
+                  <td>Número de trámite:</td>
+                  <td><input type="number" id="1" placeholder="numero de tramite..." onload="setFocus(this)" onkeypress="focusAndEnable(this)" ></td>
+              </tr>
                 <tr>
-                    <td>Ingrese número de trámite:</td>
-                    <td><input type="text" name="inputs" id="1" placeholder="Número de trámite..." onkeyup="focusAndEnable(this)" onload="setFocus('1')"></td>
+                    <td>Input(Texto)</td>
+                    <td><input type="text" id="2" placeholder="Un texto..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="2" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Rango)</td>
+                    <td><input type="range" id="3" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="3" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Constraseñas)</td>
+                    <td><input type="password" id="4" placeholder="una contraseña..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="4" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Radio)</td>
+                    <td><input type="radio" id="5" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="5" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Botón)</td>
+                    <td><input type="button" id="6" value="Un botón" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="6" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Reseteador)</td>
+                    <td><input type="reset" id="7" value="Botón de reseteo" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="7" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Buscador)</td>
+                    <td><input type="search" id="8" placeholder="buscar..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input</td>
-                    <td><input type="text" name="inputs" id="8" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Enviar al servidor)</td>
+                    <td><input type="submit" id="9" value="Botón de envío al servidor" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="9" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Teléfono)</td>
+                    <td><input type="tel" id="10" placeholder="un teléfono..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="10" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Casilla check)</td>
+                    <td><input type="checkbox" id="11" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="11" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(URL)</td>
+                    <td><input type="url" id="12" placeholder="una url..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td> <input type="text" name="inputs" id="12" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Semana)</td>
+                    <td> <input type="week" id="13" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="13" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Hora)</td>
+                    <td><input type="time" id="14" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="14" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Meses)</td>
+                    <td><input type="month" id="15" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="15" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Imagen)</td>
+                    <td><input type="image" id="16" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="16" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Oculto)</td>
+                    <td><input type="hidden" id="17" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="17" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Archivos)</td>
+                    <td><input type="file" id="18" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="18" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Email)</td>
+                    <td><input type="email" id="19" placeholder="ingrese email..." onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="19" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Fecha y hora local)</td>
+                    <td><input type="datetime-local" id="20" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="20" onkeypress="focusAndEnable(this)" disabled> </td>
+                    <td>Input(Fecha y hora)</td>
+                    <td><input type="datetime" id="21" onkeypress="focusAndEnable(this)" disabled> </td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="21" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Fecha)</td>
+                    <td><input type="date" id="22" onkeypress="focusAndEnable(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input:</td>
-                    <td><input type="text" name="inputs" id="22" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td>Input(Color)</td>
+                    <td><input type="color" id="23" onkeypress="focusAndEnable(this)" disabled></td>
+                </tr>
+                <tr>
+                    <td>Select (Seleccionador o combo box)</td>
+                    <td>
+                        <select id="24" onkeypress="focusAndEnable()" disabled>
+                            <optgroup label="Hotel">
+                                <option>Hotel</option>
+                                <option>Hotel</option>
+                                <option>Hotel</option>
+                            </optgroup>
+                            <optgroup label="Trivago">
+                                <option>Trivago</option>
+                                <option>Trivago</option>
+                                <option>Trivago</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TextArea (Cuadro de texto multilínea)</td>
+                    <td><textarea onkeypress="focusAndEnable()" disabled id="25"></textarea></td>
                 </tr>
             </tbody>
         </table>

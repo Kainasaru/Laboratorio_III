@@ -4,22 +4,20 @@ b. Al ingresar un valor y pulsar ‘enter’ se invocará a una función que se 
 de habilitar y pasarle el foco al control siguiente, únicamente si el valor del control es válido.
 c. Si el usuario pulsa la tecla ‘esc’ el control deberá deshabilitarse y el foco será pasado al control anterior.*/
 function focusAndEnable(control: HTMLInputElement) {
-    let lastChar: string = (<KeyboardEvent>event).key;
-    let inputValue: string = control.value;
+    let lastChar: number = (<KeyboardEvent>event).keyCode;
+    let nextControl : HTMLInputElement = <HTMLInputElement>document.getElementById( (Number(control.id)+1).toString() );
     console.log( lastChar);
-    if (lastChar === "Enter" && validar(inputValue)) {
-        (<HTMLInputElement>document.getElementById((parseInt(control.id) + 1).toString())).disabled = false;
-        setFocus( (parseInt(control.id) + 1).toString());
-    }
-    else if (lastChar === "Escape" && validar(inputValue) && parseInt(control.id) > 1) {
+    if (lastChar === 13 /*&& validar(inputValue)*/) {
+        control.disabled = true;
+        setFocus( nextControl);
+        nextControl.disabled = false;
+      }
+    else if (lastChar === 27 /*&& validar(inputValue) && parseInt(control.id) > 1*/) {
         console.log("entre");
-        (<HTMLInputElement>control).disabled = true;
-        control.value = "";
-        setFocus((parseInt(control.id) - 1).toString());
     }
 }
-function setFocus(inputId: string) {
-    document.getElementById(inputId).focus();
+function setFocus( input : HTMLElement  ) {
+    input.focus();
 }
 function validar(str: string): boolean {
     return !isNaN(Number(str));
