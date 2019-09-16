@@ -1,5 +1,5 @@
 <?php
-include_once ("./verificacion.php");
+//include_once ("./verificacion.php");
 require_once ("clases/producto.php");
 require_once ("clases/archivo.php");
 

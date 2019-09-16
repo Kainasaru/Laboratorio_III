@@ -5,6 +5,7 @@ function loguear() {
     var emps = String(localStorage.getItem("Empleados")).split(",");
     var empName = document.getElementById("name").value;
     var empFile = document.getElementById("file").value;
+    var redirect = false;
     /* Creo el elemento font con el mensaje en caso de error */
     var msgElement = document.createElement("font");
     msgElement.id = "msg1";
@@ -16,11 +17,17 @@ function loguear() {
     /**/
     for (var i = 0; i < emps.length; i++) {
         var emp = emps[i].split("-");
-        if (emp[0] == empName && emp[1] == empFile) {
-            window.location.href = "./principal.html";
+        if (emp[0].toLowerCase() == empName.toLowerCase() && emp[1].toLowerCase() == empFile.toLowerCase()) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "../autenticar.php", false);
+            xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+            xhttp.send("login=user");
+            window.location.replace("../index.php");
+            redirect = true;
             break;
         }
     }
-    document.getElementById("div1").appendChild(msgElement);
+    if (!redirect) {
+        document.getElementById("div1").appendChild(msgElement);
+    }
 }
-//# sourceMappingURL=login.js.map
