@@ -6,7 +6,12 @@ $tituloVentana = "PRODUCTOS - con archivos y AJAX -";
 <html>
 <head>
 	<title> <?php echo $tituloVentana; ?> </title>
-	<script type="text/javascript" src="./JavaScript/cargar_listado.js"></script>
+	<script type="text/javascript" src="./JavaScript/cargar_listado.js">
+	window.onload = () => {
+		document.getElementById("archivo").value = "10";
+	}
+	</script>
+	<script type="text/javascript" src="./JavaScript/productos.js"></script>
 	<link href="./img/utnLogo.png" rel="icon" type="image/png" />
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -28,12 +33,11 @@ $tituloVentana = "PRODUCTOS - con archivos y AJAX -";
 					<tr>
 						<td width="50%">
 							<div id="divFrm" style="height:350px;overflow:auto;margin-top:20px">
-								<form id="frm" enctype="multipart/form-data" >
+								<form id="frm" enctype="multipart/form-data" method="POST" action="./administracion.php">
 									<input type="text" name="codBarra" id="codBarra" placeholder="Ingrese c&oacute;digo de barras" />
 									<input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre" />
 									<input type="file" name="archivo" id="archivo" /> 
-									
-									<input type="button" class="MiBotonUTN" onclick="Main.AgregarProducto()" value="Guardar"  />
+									<input type="button" class="MiBotonUTN" value="Guardar" onclick="Main.AgregarProducto()" />
 									<input type="hidden" id="hdnQueHago" name="queHago" value="agregar" />
 								</form>
 							</div>

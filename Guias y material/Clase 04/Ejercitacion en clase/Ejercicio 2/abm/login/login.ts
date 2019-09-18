@@ -19,10 +19,12 @@ function loguear() {
     let emp : string[] = emps[i].split("-");
     if(emp[0].toLowerCase() == empName.toLowerCase() && emp[1].toLowerCase() == empFile.toLowerCase()) {
       let xhttp : XMLHttpRequest = new XMLHttpRequest();
-      xhttp.open("POST","../autenticar.php",false);
+      //Cargo la sesion
+      xhttp.open("POST","../autenticar.php",true);
       xhttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
       xhttp.send("login=user");
       window.location.replace("../index.php");
+      //Evito que se muestre el mensaje de error si el usuario se logueo correctamente
       redirect = true;
       break;
     }

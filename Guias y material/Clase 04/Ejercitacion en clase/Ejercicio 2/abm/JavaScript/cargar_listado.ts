@@ -1,29 +1,20 @@
-window.onload = () => {
-    let xhttp: XMLHttpRequest = new XMLHttpRequest();
-    let error = false;
-    xhttp.onreadystatechange = () => {
-        if (xhttp.readyState == 4 && xhttp.status == 200 && xhttp.response == 0) {
-            window.location.href = "./login/login.php";
-            error = true;
-        }
-    };
-    xhttp.open("GET", "./verificar_usuario.php?verify=user", false);
-    xhttp.send();
-    if (!error) {
-        xhttp.onreadystatechange = () => {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-                document.getElementById("divGrilla").innerHTML = xhttp.response;
+let xhttp: XMLHttpRequest = new XMLHttpRequest();
+xhttp.onreadystatechange = () => {
+    if (xhttp.readyState == 4 && xhttp.status == 200 && xhttp.response == 0) {
+        window.location.replace("./login/login.php");
+    }
+    else { //Si el usuario esta logueado cargo sus productos
+        let xhttp2: XMLHttpRequest = new XMLHttpRequest();
+        xhttp2.onreadystatechange = () => {
+            if (xhttp2.readyState == 4 && xhttp2.status == 200) {
+                document.getElementById("divGrilla").innerHTML = xhttp2.response;
             }
         };
-        xhttp.open("POST", "./administracion.php", true);
-        xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-        xhttp.send("queHago=mostrarGrilla");
+        xhttp2.open("POST", "./administracion.php", true);
+        xhttp2.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+        xhttp2.send("queHago=mostrarGrilla");
     }
-}
-
-window.onunload = () => {
-    let xhttp : XMLHttpRequest = new XMLHttpRequest();
-    xhttp.open("POST","./autenticar.php",false);
-    xhttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    xhttp.send();
-}
+};
+xhttp.open("POST", "./verificar_usuario.php", true);
+xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+xhttp.send("verify=user");

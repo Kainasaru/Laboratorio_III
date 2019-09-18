@@ -1,28 +1,20 @@
-window.onload = function () {
-    var xhttp = new XMLHttpRequest();
-    var error = false;
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200 && xhttp.response == 0) {
-            window.location.href = "./login/login.php";
-            error = true;
-        }
-    };
-    xhttp.open("GET", "./verificar_usuario.php?verify=user", false);
-    xhttp.send();
-    if (!error) {
-        xhttp.onreadystatechange = function () {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-                document.getElementById("divGrilla").innerHTML = xhttp.response;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200 && xhttp.response == 0) {
+        window.location.replace("./login/login.php");
+    }
+    else { //Si el usuario esta logueado cargo sus productos
+        var xhttp2_1 = new XMLHttpRequest();
+        xhttp2_1.onreadystatechange = function () {
+            if (xhttp2_1.readyState == 4 && xhttp2_1.status == 200) {
+                document.getElementById("divGrilla").innerHTML = xhttp2_1.response;
             }
         };
-        xhttp.open("POST", "./administracion.php", true);
-        xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-        xhttp.send("queHago=mostrarGrilla");
+        xhttp2_1.open("POST", "./administracion.php", true);
+        xhttp2_1.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+        xhttp2_1.send("queHago=mostrarGrilla");
     }
 };
-window.onunload = function () {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "./autenticar.php", false);
-    xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-    xhttp.send();
-};
+xhttp.open("POST", "./verificar_usuario.php", true);
+xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+xhttp.send("verify=user");
