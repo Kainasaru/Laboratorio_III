@@ -1,0 +1,26 @@
+<!--Aplicación Nº 1 (Mostrar números impares)
+Confeccionar un programa que solicite el ingreso de un número positivo (validar) y que muestre en un 
+<input type=”text”> la cantidad de números impares que hay entre ese número y el cero. Realizarlo
+ utilizando el objeto XMLHttpRequest.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript" src="./resources/ajax.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Números</title>
+</head>
+
+<body>
+    <h1>Buscar números impares desde 0:</h1>
+    <div style="border: solid;border-color: blue;width: 20em;">
+        <pre> Número:    <input type="text" id="number" style="width: 16em"></pre>
+        <font color="red" id="err" hidden> Número inválido.</font><br/>
+        <pre> Resultado: <input type="text" id="result" style="width: 16em"></pre>
+        <input type="submit" id="submitBtn" value="Enviar" onclick="enviar()" style="width: 24em">
+    </div>
+</body>
+
+</html>
