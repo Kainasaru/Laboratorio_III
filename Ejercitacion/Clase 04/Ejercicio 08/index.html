@@ -1,0 +1,43 @@
+<!--Aplicación Nº 8 (Mostrar noticias) Diseñar una página HTML que incluya una zona llamada noticias,
+en la que se deben mostrar noticias generadas por el servidor web. Añadir el código TypeScript necesario para:
+ De forma periódica cada cierto tiempo (por ejemplo cada cinco segundos) se realiza una petición al servidor 
+mediante AJAX y se muestra el contenido de la respuesta en la zona reservada para las noticias.  Además del
+contenido enviado por el servidor, se debe mostrar la hora en la que se ha recibido la respuesta.  Cuando 
+se pulse el botón "Detener", la aplicación detiene las peticiones periódicas al servidor. Si se vuelve a
+pulsar sobre ese botón, se reanudan las peticiones periódicas.  Añadir la lógica de los botones "Anterior"
+y "Siguiente", que detienen las peticiones al servidor y permiten mostrar los contenidos anteriores o 
+posteriores al que se muestra en ese momento.  Cuando se recibe una respuesta del servidor, se resalta 
+visualmente la zona llamada noticias.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript" src="./Javascript/functions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webin</title>
+</head>
+
+<body onload="solicitar('start','null')">
+    <h1>Noticias</h1>
+    <div style="border: medium solid black;width:20em;text-align: center;" id="news"></div>
+    <div style="margin-left: 3.2em">
+        <input type="button" value="Anterior" onclick="" id="btnAnterior" >
+        <input type="button" value="Siguiente" onclick="" id="btnSiguiente">
+        <input type="button" value="Detener" onclick="" id="controlBtn" style="background-color: red;">
+    </div>
+    <h2>El juego</h2>
+    <div style="border: medium solid black;width:20em;text-align: center;" id="games">
+        Juego es toda actividad que realizan uno o más jugadores, empleando su imaginación o herramientas para crear
+        unasituación con un número determinado de reglas, con el fin de proporcionar entretenimiento y diversión.
+        Existen juegos competitivos, donde los jugadores tienen que lograr un objetivo, y juegos no competitivos,
+        donde los jugadores buscan simplemente disfrutar de la actividad y diversión. Los juegos normalmente se
+        diferencian de los trabajos por el objeto de su realización. Sin embargo, en muchos casos estos no tienen
+        una diferencia demasiado clara. Asimismo, el juego se utiliza como herramienta educativa, pues en la mayoría
+        de los casos funcionan estimulando habilidades prácticas psicológicas.
+    </div>
+
+</body>
+
+</html>

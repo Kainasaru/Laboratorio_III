@@ -1,0 +1,28 @@
+<!--Aplicación Nº 3 (Determinar si una palabra existe)
+A partir del ejercicio anterior, agregarle un <input type=”text”> que le permita al usuario ingresar un palabra. 
+Por medio del el objeto XMLHttpRequest, buscar el archivo, y al encontrarlo, buscar dentro del archivo si
+ existe la palabra que ingreso el usuario dentro del mismo.
+Indicar, por medio de mensajes:
+ Si el archivo existe o no.
+ Si la palabra existe o no.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript" src="./resources/ajax.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Archivos</title>
+</head>
+
+<body>
+    <h1>Buscar palabra en archivo:</h1>
+    <div style="border: solid;border-color: blue;width: 20em;">
+        Palabra a buscar:<br/><input type="text" id="word" style="width: 23.5em"><br/>
+        Ruta del archivo:<br/><input type="text" id="file" style="width: 23.5em">
+        <input type="submit" id="submitBtn" value="Enviar" onclick="enviar()" style="width: 24em">
+    </div>
+</body>
+
+</html>
