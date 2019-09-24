@@ -59,8 +59,7 @@ switch ($queHago) {
 
 		if ($queHago === "modificar") {
 			if (!Producto::Modificar($p)) {
-				echo "Lamentablemente ocurrio un error y no se pudo escribir en el archivo.";
-				break;
+				Producto::Guardar($p);
 			}
 		}
 

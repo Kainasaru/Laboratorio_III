@@ -33,4 +33,4 @@ echo "<p>El padre de su hijo viola la restricción perimetral y la amenaza de mu
 Hace poco, le rompió la luneta del auto a cascotazos. La mujer, vecina de La Plata, vive con miedo.</p>";
 break;
 }
-
+?>

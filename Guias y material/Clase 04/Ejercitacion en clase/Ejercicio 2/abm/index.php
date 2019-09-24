@@ -13,7 +13,7 @@ $tituloVentana = "PRODUCTOS - con archivos y AJAX -";
 	</script>
 	<script type="text/javascript" src="./JavaScript/productos.js"></script>
 	<link href="./img/utnLogo.png" rel="icon" type="image/png" />
-
+1
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="animacion.css">		
 	<link rel="stylesheet" type="text/css" href="estilo.css">
