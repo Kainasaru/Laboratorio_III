@@ -1,0 +1,24 @@
+<!--Aplicación Nº 1 (Generar un Json)
+Crear un Json que represente información acerca de un producto (codigoBarra, nombre,
+precio). Diseñarlo en el <script type=”text/javascript”>.
+Validar su buen diseño ingresando en “http://jsonviewer.stack.hu/” .
+Una vez validado el Json, mostrar todos sus atributos en un alert() y en el console.log()-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript">
+        let json = { "codigoBarra" : "abc123" , "nombre" : "tomate" , "precio" : 50 };
+        let objStr = JSON.stringify(json);
+        alert("Objeto json:  " + json.codigoBarra + " - " + json.nombre + " - " + json.precio);
+        console.log("String del objeto: ", objStr);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+</head>
+<body>
+    <h1>Esta es una página de práctica JSON</h1>
+    <h3>En consola se muestra el string del objeto.</h3>
+</body>
+</html>
