@@ -7,12 +7,26 @@ Una vez validado el Json, mostrar todos sus atributos en un alert() y en el cons
 <html lang="es">
 <head>
     <script type="text/javascript">
-        let productos = [{ "codigoBarra" : "abc123" , "nombre" : "tomate" , "precio" : 50 },
-        {"codigoBarra" : "123" , "nombre" : "arroz" , "precio" : 45 },
-        {"codigoBarra" : "456" , "nombre" : "pepino" , "precio" : 25} ];
-        for(let i = 0 ; i < productos.le)
-
-        let objStr = JSON.stringify(json);
+        window.onload = function () {
+            var productos = [{ "codigoBarra" : "abc123" , "nombre" : "tomate" , "precio" : 50 },
+            {"codigoBarra" : "123" , "nombre" : "arroz" , "precio" : 45 },
+            {"codigoBarra" : "456" , "nombre" : "pepino" , "precio" : 25} ];
+            var keys = new Array(productos.length);
+            //Cargo las keys
+            for( var i = 0 ; i < productos.length ; i++) {
+                keys[i] = new Array();
+                for(var key in productos[i]) {
+                    keys[i].push(key);
+                }
+            }
+            for(var i = 0 ; i < productos.length; i++) {
+                var objData = keys[i][0] + ": " + productos[i].codigoBarra + " - "  +
+                keys[i][1] + ": " + productos[i].nombre + " - " +
+                keys[i][2] + ": " + productos[i].precio;
+                alert(objData);
+                console.log(objData+"\n");
+            }
+        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +34,7 @@ Una vez validado el Json, mostrar todos sus atributos en un alert() y en el cons
     <title>Json</title>
 </head>
 <body>
-    
+    <h1>Mostrar atributos de un array JSON</h1>
+    <h3>También se muestran por consola.</h3>
 </body>
 </html>
