@@ -1,0 +1,27 @@
+<!--Aplicación Nº 8 (Leer un archivo .json II)
+Tomando como punto de partida el ejercicio anterior, armar una página que posea un <input
+type=”button”> que al pulsarlo, muestre el JSON recibido por Ajax en los elementos de tipo
+<input type=”text”> (uno por cada atributo del objeto recibido).-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript" src="./Javascript/submit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+</head>
+<body>
+  <div style="border: solid black;width: 15em;">
+    <fieldset>
+      <legend>Mostrar un json</legend>
+      Id:<input type="text" id="idTxt" style="width: 100%;" placeholder="id..." readonlt><br/>
+      Marca:<input type="text" id="marcaTxt" style="width: 100%;" placeholder="marca..." readonly><br/>
+      Precio:<input type="text" id="precioTxt" style="width: 100%;" placeholder="precio..." readonly><br/>
+      Color:<input type="text" id="colorTxt" style="width: 100%;" placeholder="color..." readonly><br/>
+      Modelo:<input type="text" id="modeloTxt" style="width: 100%;" placeholder="modelo..." readonly><br/><br/>
+      <input type="button" id="sendBtn" value="mostrar" style="width: 100%;" onclick="submit()">
+    </fieldset>
+  </div>
+</body>
+</html>

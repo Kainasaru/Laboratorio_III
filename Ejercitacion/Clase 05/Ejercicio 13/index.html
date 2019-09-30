@@ -1,0 +1,38 @@
+<!--Aplicación Nº 13 (Cargar ComboBox desde .json)
+Generar una aplicación web que cargue de forma estática el combo paises (<select>) con las
+siguientes opciones:
+● ARGENTINA (value=”AR”)
+● FRANCIA (value=”FR”)
+● GRECIA (value=”GR”)
+● USA (value=”US”)
+En el evento onchange de dicho combo, invocar a una función que por AJAX, permita la lectura
+del archivo paises.json, retornando un array de objetos JSON.
+De acuerdo a la selección del primer combo, se pide: cargar dinámicamente el combo ciudades
+(<select>) sólo con las ciudades correspondientes al país seleccionado.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <script type="text/javascript" src="./Javascript/submit.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Paises</title>
+</head>
+
+<body>
+  <h1>Países</h1>
+  País:<br/><select onchange="cargarCiudades()" id="pais">
+    <option value="AR" selected>ARGENTINA</option>
+    <option value="FR">FRANCIA</option>
+    <option value="GR">GRECIA</option>
+    <option value="US">USA</option>
+  </select><br/>
+  Ciudad:<br/>
+  <select id="ciudad">
+    
+  </select>
+
+</body>
+
+</html>

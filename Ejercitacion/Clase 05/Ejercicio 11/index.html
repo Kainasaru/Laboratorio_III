@@ -1,0 +1,36 @@
+<!--Aplicación Nº 11 (Agregar elemento a un .json)
+A la aplicación del punto anterior, agregarle otro <input type=”button”> que permita agregar
+un nuevo JSON al archivo city.list.min.json. La aplicación deberá tener tantos elementos de
+tipo <input type=”text”> como atributos tenga el JSON. Como página nexo, utilice
+administrarCiudades.php, pasándole la opción “agregarCiudad” y el JSON a ser agregado.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript" src="./Javascript/submit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ciudades</title>
+</head>
+<body>
+  <h1>Ver ciudades</h1>
+  <div style="border: solid black;width: 15em;">
+      <fieldset>
+        <legend>Ciudades</legend>
+        Id:<input type="text" id="id" style="width: 100%;" placeholder="id..." ><br/>
+        Nombre:<input type="text" id="nombre" style="width: 100%;" placeholder="nombre..."><br/>
+        País: (ISO 3166-1 ALPHA-2)<input type="text" id="pais" style="width: 100%;" placeholder="pais..."><br/>
+        Coordenadas:<br/>
+        Latitud:<br/>
+        <input type="text" id="lat" style="width: 100%;" placeholder="latitud..."><br/>
+        <input type="text" id="long" style="width: 100%;" placeholder="longitud..."><br/>
+        <input type="button" value="Agregar ciudad" onclick="agregarCiudad()">
+        <span style="border: solid black;"><input type="button" id="ciudadesBtn" value="Mostrar lista" onclick="traerCiudades()"></span><br/>
+        <span id="msg"></span>
+      </fieldset>
+    </div>
+  
+  <div id="result">
+  </div>
+</body>
+</html>

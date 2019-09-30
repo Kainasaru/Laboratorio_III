@@ -1,0 +1,32 @@
+<!--Aplicación Nº 16 (Filtrar listado desde archivo .json II)
+Tomando como punto de partida el ejercicio anterior, agregarle un <select> (que posea como opciones tamaño, color y país)
+   el cuál indicará el campo del filtrado. En el <input type=”text”> agregar el valor de filtrado (de acuerdo al campo 
+   de filtrado) y al pulsar el <input type=”button”>, generar dinámicamente un listado de las remeras filtradas. 
+   Como página nexo, utilice administrarRemeras.php, pasándole la opción “traerRemerasFiltradasPorCampo”.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript" src="./Javascript/submit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remeras</title>
+</head>
+<body>
+  <h1>Ver remeras</h1>
+  <fieldset>
+    <legend>Filtrar</legend>
+    Valor de filtrado:<br/><input type="text" placeholder="filtro..." id="filtro"><br/>
+    Campo a filtrar:<br/>
+    <select id="selector">
+      <option value="tamaño">Tamaño</option>
+      <option value="color">Color</option>
+      <option value="pais">Pais</option>
+    </select><br/>
+    <input type="button" value="Filtrar" onclick="filtrarRemeras()"> <br/><br/>
+    <input type="button" id="autosBtn" value="Mostrar lista" onclick="traerRemeras()">
+  </fieldset>
+  <div id="result">
+  </div>
+</body>
+</html>

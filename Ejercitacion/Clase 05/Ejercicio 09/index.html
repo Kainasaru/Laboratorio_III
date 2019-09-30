@@ -1,0 +1,21 @@
+<!--Aplicación Nº 9 (Armar listado desde un .json)
+Realizar una aplicación web que muestre un listado de autos, tomando como origen de datos el
+archivo autos.json. La aplicación tendrá sólo un botón (<input type=”button”>), que al
+pulsarlo, generará dinámicamente un listado de los autos (armar una tabla html) que se
+reciban como objetos JSON desde el archivo. Como página nexo, utilice traerAutos.php.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript" src="./Javascript/submit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+</head>
+<body>
+  <h1>Autos.json</h1>
+  <input type="button" id="autosBtn" value="Mostrar lista" onclick="traerAutos()">
+  <div id="result">
+  </div>
+</body>
+</html>

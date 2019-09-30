@@ -1,0 +1,44 @@
+<!--Aplicación Nº 12 (Quitar elemento a un .json)
+A la aplicación del punto anterior, agregarle al listado una columna extra (ACCION) que posea
+un elemento <a> (cuyo texto sea Eliminar) que permita quitar el elemento seleccionado del
+archivo city.list.min.json. Como página nexo, utilice administrarCiudades.php, pasándole
+la opción “quitarCiudad” y el código de ciudad (objJSON._id) a ser eliminado.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <script type="text/javascript" src="./Javascript/submit.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ciudades</title>
+</head>
+
+<body>
+  <h1>Ver ciudades</h1>
+  <div style="border: solid black;width: 15em;">
+    <fieldset>
+      <legend>Ciudades</legend>
+      <fieldset>
+        <legend>Agregar</legend>
+        Id:<input type="text" id="id" style="width: 100%;" placeholder="id..."><br />
+        Nombre:<input type="text" id="nombre" style="width: 100%;" placeholder="nombre..."><br />
+        País: (ISO 3166-1 ALPHA-2)<input type="text" id="pais" style="width: 100%;" placeholder="pais..."><br />
+        Coordenadas:<br />
+        Latitud:<br />
+        <input type="text" id="lat" style="width: 100%;" placeholder="latitud..."><br />
+        <input type="text" id="long" style="width: 100%;" placeholder="longitud..."><br />
+        <input type="button" value="Agregar ciudad" onclick="agregarCiudad()">
+      </fieldset>
+      <a name="home"></a>
+      <span style="border: solid black;"><input type="button" id="ciudadesBtn" value="Mostrar lista"
+      onclick="traerCiudades()"></span><br />
+      <span id="msg"></span>
+    </fieldset>
+  </div>
+
+  <div id="result">
+  </div>
+</body>
+
+</html>

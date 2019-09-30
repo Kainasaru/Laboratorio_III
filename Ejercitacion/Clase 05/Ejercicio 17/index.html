@@ -1,0 +1,54 @@
+<!--Aplicación Nº 17 (Agregar elemento a un archivo .json)
+Realizar una aplicación web que permita agregar un nuevo JSON al archivo remeras.json. La aplicación deberá tener
+ tantos elementos de tipo <input type=”text”> como atributos tenga el JSON. Como página nexo, 
+ utilice administrarRemeras.php, pasándole la opción “agregarRemera” y el JSON a ser agregado.
+Nota: Para simplificar el ejercicio, ‘hardcodee’ el valor del campo logo con el siguiente valor: 
+“https://robohash.org/authicperferendis.bmp?size=50x50&set=set1”.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script type="text/javascript" src="./Javascript/submit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remeras</title>
+</head>
+<body>
+  <h1>Ver remeras</h1>
+  <fieldset>
+    <legend>Agregar</legend>
+    Id:<br/>
+    <input type="text" id="id" placeholder="id..."><br/>
+    Slogan:<br/>
+    <input type="text" id="slogan" placeholder="slogan..."><br/>
+    Tamaño:<br/>
+    <input type="text" id="size" placeholder="tamaño..."><br/>
+    Precio:<br/>
+    <input type="text" id="price" placeholder="precio..."><br/>
+    Color:<br/>
+    <input type="text" id="color" placeholder="color..."><br/>
+    Nombre del fabricante:<br/>
+    <input type="text" id="manName" placeholder="nombre del fabricante..."><br/>
+    <input type="text" id="manLogo" value="https://robohash.org/authicperferendis.bmp?size=50x50&set=set1" hidden>
+    País del fabricante:<br/>
+    <input type="text" id="manCountry" placeholder="país del fabricante..." ><br/>
+    Ciudad del fabricante:<br/>
+    <input type="text" id="manCity" placeholder="ciudad del fabricante" ><br/><br/>
+    <input type="button" value="Agregar remera" onclick="agregarRemera()">
+  </fieldset>
+  <fieldset>
+    <legend>Filtrar</legend>
+    Valor de filtrado:<br/><input type="text" placeholder="filtro..." id="filtro"><br/>
+    Campo a filtrar:<br/>
+    <select id="selector">
+      <option value="tamaño">Tamaño</option>
+      <option value="color">Color</option>
+      <option value="pais">Pais</option>
+    </select><br/>
+    <input type="button" value="Filtrar" onclick="filtrarRemeras()"> <br/><br/>
+    <input type="button" id="autosBtn" value="Mostrar lista" onclick="traerRemeras()">
+  </fieldset>
+  <div id="result">
+  </div>
+</body>
+</html>
