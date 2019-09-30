@@ -153,7 +153,7 @@ function filtrarRemeras() {
                 tabla.tBodies[0].rows[i].insertCell().innerHTML = "<img src='" + fabricante.logo + "'>";
                 tabla.tBodies[0].rows[i].insertCell().textContent = ubicacion.country;
                 tabla.tBodies[0].rows[i].insertCell().textContent = ubicacion.city;
-                tabla.tBodies[0].rows[i].insertCell().innerHTML = "<a href='#" + json[i].id + "' onclick='quitarRemera(\'" + json[i].id + "'\)'>Eliminar</a><br/>\
+                tabla.tBodies[0].rows[i].insertCell().innerHTML = "<a href='#" + json[i].id + "' onclick='quitarRemera(\"" + json[i].id + "\")' >Eliminar</a><br/>\
                 <a href='#' onclick='modificarRemera("+ JSON.stringify(JSON.stringify(json[i])) + ")' >Modificar</a>";
                 tabla.tBodies[0].rows[i].insertCell().innerHTML = '<a name="' + json[i].id + '"></a>';
                 tabla.tBodies[0].rows[i].cells[10].hidden = true;
