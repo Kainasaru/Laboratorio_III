@@ -15,7 +15,7 @@ pasado al control anterior.-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todos los controles</title>
 </head>
-<body>
+<body onload="setFocus(document.getElementById('1'))">
     <form>
         <table border="1">
             <caption>Controles de html:</caption>
@@ -23,103 +23,92 @@ pasado al control anterior.-->
                 <th>Nombre</th>
                 <th>Control</th>
             </thead>
-            <tbody>
-              <tr>
-                  <td>Número de trámite:</td>
-                  <td><input type="number" id="1" placeholder="numero de tramite..." onload="setFocus(this)" onkeypress="focusAndEnable(this)" ></td>
-              </tr>
+            <tbody id="table">
+                <tr>
+                    <td>Input(Números)</td>
+                    <td><input type="number" id="1" placeholder="un numero..." onkeydown="focusNextPrev(this)"></td>
+                </tr>
                 <tr>
                     <td>Input(Texto)</td>
-                    <td><input type="text" id="2" placeholder="Un texto..." onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="text" id="2" placeholder="Un texto..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Rango)</td>
-                    <td><input type="range" id="3" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="range" id="3" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Constraseñas)</td>
-                    <td><input type="password" id="4" placeholder="una contraseña..." onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="password" id="4" placeholder="una contraseña..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Radio)</td>
-                    <td><input type="radio" id="5" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="radio" id="5" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Botón)</td>
-                    <td><input type="button" id="6" value="Un botón" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="button" id="6" value="Un botón" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Reseteador)</td>
-                    <td><input type="reset" id="7" value="Botón de reseteo" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="reset" id="7" value="Botón de reseteo" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Buscador)</td>
-                    <td><input type="search" id="8" placeholder="buscar..." onkeypress="focusAndEnable(this)" disabled></td>
-                </tr>
-                <tr>
-                    <td>Input(Enviar al servidor)</td>
-                    <td><input type="submit" id="9" value="Botón de envío al servidor" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="search" id="8" placeholder="buscar..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Teléfono)</td>
-                    <td><input type="tel" id="10" placeholder="un teléfono..." onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="tel" id="9" placeholder="un teléfono..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Casilla check)</td>
-                    <td><input type="checkbox" id="11" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="checkbox" id="10" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(URL)</td>
-                    <td><input type="url" id="12" placeholder="una url..." onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="url" id="11" placeholder="una url..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Semana)</td>
-                    <td> <input type="week" id="13" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td> <input type="week" id="12" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Hora)</td>
-                    <td><input type="time" id="14" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="time" id="13" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Meses)</td>
-                    <td><input type="month" id="15" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="month" id="14" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
-                    <td>Input(Imagen)</td>
-                    <td><input type="image" id="16" onkeypress="focusAndEnable(this)" disabled></td>
-                </tr>
-                <tr>
-                    <td>Input(Oculto)</td>
-                    <td><input type="hidden" id="17" onkeypress="focusAndEnable(this)" disabled></td>
-                </tr>
                 <tr>
                     <td>Input(Archivos)</td>
-                    <td><input type="file" id="18" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="file" id="15" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Email)</td>
-                    <td><input type="email" id="19" placeholder="ingrese email..." onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="email" id="16" placeholder="ingrese email..." onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Fecha y hora local)</td>
-                    <td><input type="datetime-local" id="20" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="datetime-local" id="17" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Fecha y hora)</td>
-                    <td><input type="datetime" id="21" onkeypress="focusAndEnable(this)" disabled> </td>
+                    <td><input type="datetime" id="18" onkeydown="focusNextPrev(this)" disabled> </td>
                 </tr>
                 <tr>
                     <td>Input(Fecha)</td>
-                    <td><input type="date" id="22" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="date" id="19" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Input(Color)</td>
-                    <td><input type="color" id="23" onkeypress="focusAndEnable(this)" disabled></td>
+                    <td><input type="color" id="20" onkeydown="focusNextPrev(this)" disabled></td>
                 </tr>
                 <tr>
                     <td>Select (Seleccionador o combo box)</td>
                     <td>
-                        <select id="24" onkeypress="focusAndEnable()" disabled>
+                        <select id="21" onkeydown="focusNextPrev(this)" disabled>
                             <optgroup label="Hotel">
                                 <option>Hotel</option>
                                 <option>Hotel</option>
@@ -135,7 +124,7 @@ pasado al control anterior.-->
                 </tr>
                 <tr>
                     <td>TextArea (Cuadro de texto multilínea)</td>
-                    <td><textarea onkeypress="focusAndEnable()" disabled id="25"></textarea></td>
+                    <td><textarea id="22" onkeydown="focusNextPrev(this)" disabled></textarea></td>
                 </tr>
             </tbody>
         </table>
