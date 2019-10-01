@@ -4,5 +4,9 @@ function mostrar() {
   edad = ( isNaN(Number(edad)) )? "ERROR" : edad;
   console.log(`Su nombre es ${nombre} y su edad ${edad}.`);
   alert(`Su nombre es ${nombre} y su edad ${edad}.`);
-  (<HTMLDivElement>document.getElementById("3")).innerHTML = `Nombre: ${nombre} - Edad: ${edad}`;
+  document.getElementById("3").innerHTML = `Nombre: ${nombre} - Edad: ${edad}`;
+}
+
+function borrar() {
+  document.getElementById("3").innerHTML = "";
 }
