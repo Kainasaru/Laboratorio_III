@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agregar</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Cargar Alien</legend>
+        Cuadrante:<br />
+        <input type="text" id="cuadrante"><br />
+        Edad:<br />
+        <input type="text" id="edad"><br />
+        Altura:<br />
+        <input type="text" id="altura"><br />
+        Raza:<br />
+        <input type="text" id="raza"><br />
+        Planeta de origen:<br />
+        <input type="text" id="planetaOrigen"><br />
+        Ruta de la foto:<br />
+        <input type="file" id="pathFoto"><br />
+        <p id="fotoTitulo" hidden>Foto:<br/></p>
+        <img src="" height="100px" width="100px" id="imgFoto" hidden>
+        <br/>
+        <input type="button" value="Verficar existencia" onclick="procesar('verificar')" ><br/>
+        <input type="button" value="Obtener por cuadrantes" onclick="procesar('cuadrantes')" ><br/>
+        <input type="button" value="Agregar" onclick="procesar('agregar')" id="btnAgregar" ><br/>
+
+    </fieldset>
+    <input type="button" value="Guardar en local storage" onclick="procesar('localstorage')" ><br/>
+    <input type="button" value="Mostrar aliens" onclick="procesar('mostrar')" ><br/>
+    <div id="result">
+    </div>
+</body>
+
+</html>
