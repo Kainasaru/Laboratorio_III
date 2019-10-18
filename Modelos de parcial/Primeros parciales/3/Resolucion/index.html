@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: 20em;">
+        <legend>Agregar televisor</legend>
+        Codigo:<br/>
+        <input type="number" id="codigo"><br/>
+        Marca:<br/>
+        <input type="text" id="marca"><br/>
+        Precio:<br/>
+        <input type="number" id="precio"><br/>
+        Tipo:<br/>
+        <input type="text" id="tipo"><br/>
+        Pais de origen:<br/>
+        <input type="text" id="paisOrigen"><br/>
+        Foto:<br/>
+        <input type="file" id="pathFoto"><br/>
+        Visualización:<br/>
+        <img src="" id="imgFoto" width="100px" height="100px"><br/>
+        <input type="button" value="Agregar" id="btnAgregar" onclick="PrimerParcial.Manejadora.AgregarTelevisor()"/><br/>
+        <input type="button" value="Mostrar" onclick="PrimerParcial.Manejadora.MostrarTelevisores()"/><br/>
+        <input type="button" value="Verificar existencia" onclick="PrimerParcial.Manejadora.VerificarExistencia()"/><br/>
+        <input type="button" value="Guardar en local storage" onclick="PrimerParcial.Manejadora.GuardarEnLocalStorage()"/><br/>
+
+    </fieldset>
+    <div id="result"></div>
+</body>
+</html>

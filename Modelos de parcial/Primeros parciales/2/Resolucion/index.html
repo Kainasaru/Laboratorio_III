@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" onload="Test.Manejadora.LimpiarForm()">
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camperas</title>
+</head>
+<body onload="Test.Manejadora.CargarColoresJSON()">
+    <form id="form">
+        <fieldset style="width: 20em;">
+            <legend>Agregar campera</legend>
+            Codigo:<br/>
+            <font color='red' id="codigoAst" hidden>*</font><input type="number" id="codigo"/><br/>
+            Nombre:<br/>
+            <font color='red' id="nombreAst" hidden>*</font><input type="text" id="nombre"/><br/>
+            Precio:<br/>
+            <font color='red' id="precioAst" hidden>*</font><input type="number" id="precio"/><br/>
+            Talle:<br/>
+            <font color='red' id="talleAst" hidden>*</font><input type="text" id="talle"/><br/>
+            Color:<br/>
+            <font color='red' id="colorAst" hidden>*</font><input type="text" id="color"/><br/>
+            Foto:<br/>
+            <font color='red' id="pathFotoAst" hidden>*</font><input type="file" id="pathFoto"/><br/>
+            <input type="button" value="Agregar" onclick="AdministrarValidaciones('agregar')" id="agregarBtn"/>
+            <input type="button" value="Mostrar camperas" onclick="Test.Manejadora.MostrarCamperas(),Test.Manejadora.LimpiarForm()"/><br/>
+            Filtrar por color:<br/>
+            <select id="cboColor" >
+            </select><br/>
+            <input type="button" value="Filtrar" onclick="Test.Manejadora.FiltrarCamperasPorColor(),Test.Manejadora.LimpiarForm()"><br/>
+            <img src="./BACKEND/gif-load.gif" id="gif" width="200px" height="200px" hidden>
+        </fieldset>
+    </form>
+    <div id="camperas"></div>
+</body>
+</html>
